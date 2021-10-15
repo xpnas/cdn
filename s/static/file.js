@@ -78,7 +78,7 @@ $(() => {
         return false;
       }
       var fileSize = file.size;
-      var maxSize = 25*1024*1024;
+      var maxSize = 50*1024*1024;
       if (
         ext != '.PNG' &&
         ext != '.GIF' &&
