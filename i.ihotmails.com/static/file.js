@@ -15,6 +15,16 @@ $(() => {
       }
     },
   });
+
+  $.ajax({
+    url: host + '/info',
+    type: 'get',
+    success: (res) => {
+      let info = document.getElementById('info');
+        info.innerText = res;
+    },
+  });
+  
   //  });
   /* 临时粘贴上传 */
   $(document).on('paste', (event) => {
@@ -78,7 +88,7 @@ $(() => {
         return false;
       }
       var fileSize = file.size;
-      var maxSize = 50*1024*1024;
+      var maxSize = 10 * 1024 * 1024;
       if (
         ext != '.PNG' &&
         ext != '.GIF' &&
